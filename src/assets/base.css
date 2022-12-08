@@ -1,0 +1,158 @@
+:root{
+    --primario: #D66853;
+    --secundario: #11151C; 
+    --terciario: #7D4E57;
+    --post: #212D40;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #11151C;
+}
+h1{
+    color:#D66853;
+}
+.border-bottom{
+    border-bottom: #F0F2F5 1px solid;
+}
+/* posteos */
+
+.iconF{
+    width: 1.7rem;
+    padding-right: 5px;
+}
+.nAiUser{
+    display: flex;
+}
+.nUsuario{
+    margin-top: .3rem;
+}
+.menuF{
+    margin: auto;
+}
+
+.imagenPerfil{
+    margin-right: 1rem;
+    max-width: 2rem;
+    max-height: 2rem;
+    border-radius: 50%;
+}
+.post{
+    border-bottom: 1px solid #D66853;
+}
+.botones-interaccion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botones{
+    margin: auto;
+}
+
+/* Nav */
+
+.navH2{
+    left:0;
+    margin-left: 2rem;
+    color: var(--primario);
+    font-weight: bolder;
+}
+nav{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 15rem;
+    top: 3rem;
+    height: 100%;
+    background: var(--terciario);
+    transform:translateX(-100%);
+    transition:.4s ease;
+    border-radius: 0 2rem 2rem 0;
+}
+
+.navigation li{
+    list-style:none;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+.lista{
+    height: 2.1rem;
+    background: var(--secundario);
+    width: 100%;
+    bottom: 0;
+    position:fixed;
+    display:none;
+}
+.optionFooter{
+    margin: auto;
+    width: 100%;
+}
+.navigation a{
+    color: white;
+    display: block;
+    line-height:3.5;
+    padding: 0 10px;
+    text-decoration:none;
+    transition:.4s ease;
+}
+
+.navigation a:hover{
+    transform:translateX(10%);
+}
+
+#btn-nav{
+    display: none;
+}
+
+#btn-nav:checked ~ nav{
+    transform:translateX(0);
+}
+
+.btn-nav{
+    color:var(--primario);
+    font-size:30px;
+    position: absolute;
+    left:0;
+    top:0;
+    cursor:pointer;
+    padding:6.5px 15px;
+    transition:.2s ease;
+}
+
+/* FNav */
+.formulario{
+    background:#212D40;
+    padding: 1rem;
+    color: #F0F2F5;
+    border-radius: 20px;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45vh;
+    height: 60vh;   
+}
+.formulario input, textarea{
+    background: #364156;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.input-register{
+    background: var(--primario) !important;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    margin: auto;
+    align-items: center;
+    border-radius: .5rem;
+    width: 6rem;
+}
+.router-link-active{
+    color: var(--terciario) !important;
+}
