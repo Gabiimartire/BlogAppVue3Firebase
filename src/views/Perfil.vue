@@ -1,9 +1,10 @@
 <script setup>
-    import Posts from '../components/Posts.vue'
+    import Post2 from '../components/Post2.vue'
     import user from '../store/profile'
     const newUserName = 'No user Name'
 </script>
 <template>
+
     <div>
         <router-link to="/configuracion"><img class="settings" src="../assets/settings.svg" alt=""></router-link>
     </div>
@@ -12,8 +13,10 @@
             <img :src="user? user.photoURL : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"  class="fotoPerfil d-flex justify-content-center align-items-center" />
             <h2 class="fs-5 ">{{user? user.displayName : newUserName}}</h2>
         </div>
+        <h2 class="text-center text-white fs-1 my-4">Tus Posts</h2>
         <div class="mt-2">
-            <Posts/>
+
+            <Post2 v-for="comment in comments" :key="comment.id" :comment="comment" />
         </div>
     </div>
 </template>

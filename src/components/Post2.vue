@@ -3,7 +3,6 @@
     import Favourite from './icons/FavouriteB.vue';
     import Share from './icons/ShareB.vue';
     import user from '../store/profile.js'
-    
     const newUserName = 'No User Name'
     const props = defineProps({
         comment:{

@@ -31,6 +31,8 @@
 
 <style scoped>
     input, textarea{
+        width: 100%;
+        height: 5rem;
         margin: auto;
     }
 </style>
