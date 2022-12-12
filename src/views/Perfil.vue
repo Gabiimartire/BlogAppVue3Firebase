@@ -1,5 +1,5 @@
 <script setup>
-    import Post2 from '../components/Post2.vue'
+    import Posts from '../components/Posts.vue'
     import user from '../store/profile'
     const newUserName = 'No user Name'
 </script>
@@ -16,7 +16,7 @@
         <h2 class="text-center text-white fs-1 my-4">Tus Posts</h2>
         <div class="mt-2">
 
-            <Post2 v-for="comment in comments" :key="comment.id" :comment="comment" />
+            <Posts v-for="comment in comments" :key="comment.id" :comment="comment" />
         </div>
     </div>
 </template>
