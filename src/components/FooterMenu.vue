@@ -6,7 +6,7 @@
         </div>
         <div class="d-flex flex-wrap optionFooter align-items-center justify-content-center">
             <img class="iconF" src="../assets/plus.svg" alt="">
-            <router-link style="text-decoration: none; color: var(--primario);" to="/">New Post</router-link>
+            <router-link style="text-decoration: none; color: var(--primario);" to="/createpost">New Post</router-link>
         </div>
         <div class="d-flex flex-wrap optionFooter align-items-center justify-content-center">
             <img class="iconF" src="../assets/usuario.svg" alt="">

@@ -6,6 +6,7 @@ import Perfil from '../views/Perfil.vue'
 import Configuracion from '../views/Configuracion.vue'
 import SignIn from '../views/SignIn.vue'
 import HomePosts from '../views/HomePosteos.vue'
+import CreatePost from '../views/CreatePost.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -41,9 +42,14 @@ const router = createRouter({
       component: SignIn
     },
     {
-      path: '/homePosts',
+      path: '/homeposts',
       name: 'homePosts',
       component: HomePosts
+    },
+    {
+      path: '/createpost',
+      name: 'createpost',
+      component: CreatePost
     },
   ]
 })

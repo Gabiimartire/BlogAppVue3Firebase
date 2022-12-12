@@ -54,4 +54,10 @@
         width: 1rem;
         height: 1rem;
     }
+    .botoness:hover{
+        color: var(--terciario) !important;
+    }
+    .botones:hover{
+        color: var(--terciario) !important;
+    }
 </style>

@@ -4,9 +4,9 @@
     </div>
 </template>
 <style>
-   .rtitulo{
-       color: #D66853 !important;
-       font-weight: bold!important;
-       text-decoration: none;
-    }
+.rtitulo{
+    color: #D66853 !important;
+    font-weight: bold!important;
+    text-decoration: none;
+}
 </style>
