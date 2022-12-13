@@ -1,23 +1,27 @@
 <script setup>
     import { addComment } from '../firebase/comments.js'
-    import { ref } from 'vue'   
+    import { ref, computed } from 'vue'   
+    import user from '../store/profile.js'
     const name = ref('')
     const email = ref('')
     const message = ref('')
-    const comments = ref([
-    ])
+
+
 
     const addNewComment = () => {
         addComment({
             id: crypto.randomUUID(),
             name: name.value,
+            date: Date.new(),
             email: email.value,
             message: message.value,
         })
+        message.value = ''
     }
 </script>
 
 <template>
+
     <h1 class="text-center text-white">Crea tu post</h1>
     <form >
         <div class="formulario m-auto">
