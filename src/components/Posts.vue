@@ -19,7 +19,7 @@
         <div class="nAiUser d-flex pt-2 px-3" >
             <img
             class="imagenPerfil"
-            :src="post.photoURL? post.photoURL : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"
+            :src="post.photo? post.photo : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"
             alt="" />
             <h3 class="nUsuario text-white fw-normal fs-5">{{post.name}}</h3>
         </div>
