@@ -5,7 +5,7 @@
     const props = defineProps({
         comments: [],
         postId: 0,
-        typeOf: String,
+        typeOf: Number,
     })
     const commentsWithId = ref(comments.value.filter(comment => comment.postId === props.postId))
 </script>

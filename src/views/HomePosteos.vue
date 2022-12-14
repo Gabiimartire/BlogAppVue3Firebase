@@ -5,11 +5,11 @@
     import { getComments } from '../firebase/comments.js'
     import { onMounted } from 'vue'
 
-    
-    onMounted(() => {
-        getPosts()
-        getComments()
-    })
+
+onMounted(() => {
+    getPosts()
+    getComments()
+})
 
 </script>
 

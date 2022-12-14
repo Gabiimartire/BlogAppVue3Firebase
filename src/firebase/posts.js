@@ -8,19 +8,19 @@ const addPost = (post) => {
     addDoc(postRef, post)
 }
 const getPosts = () => {
-    onSnapshot(postRef, (snapshot) =>{
-        snapshot.forEach(postData => {
-            posts.value= []
+    onSnapshot(postRef, (snapshot) => {
+        snapshot.forEach(doc => {
+            posts.value = []
             let newPost = {
-                id: postData.id,
-                date: postData.data().date,
-                name: postData.data().name,
-                email: postData.data().email,
-                message: postData.data().message,
-                photo: postData.data().photo,
+                id: doc.id,
+                date: doc.data().date,
+                name: doc.data().name,
+                email: doc.data().email,
+                message: doc.data().mesagge,
+                photo: doc.data().photo,
             }
             posts.value.push(newPost)
-            posts.value.sort((a,b) => b.date - a.date)
+            posts.value.sort((a,b)=> b.date - a.date)
         })
     })
 }

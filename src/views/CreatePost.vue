@@ -1,9 +1,13 @@
 <script setup>
     import NewPost from '../components/NewPost.vue'
+    import user from '../store/profile.js'
 </script>
 
 <template>
-    <NewPost />
+    <NewPost v-if="user"/>
+    <div>
+        
+    </div>
 </template>
 
 <style scoped>

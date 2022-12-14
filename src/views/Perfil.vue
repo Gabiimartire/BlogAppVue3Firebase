@@ -25,7 +25,6 @@
         </div>
         <h2 class="text-center text-white fs-1 my-4">Tus Posts</h2>
         <div class="mt-2">
-
             <Posts v-for="post in myPosts" :key="post.id" :post="post" />
         </div>
     </div>
