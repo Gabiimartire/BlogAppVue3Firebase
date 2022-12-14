@@ -5,9 +5,6 @@
 
 <template>
     <NewPost v-if="user"/>
-    <div>
-        
-    </div>
 </template>
 
 <style scoped>

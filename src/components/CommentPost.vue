@@ -6,6 +6,7 @@
 </script>
 
 <template>
+    
     <div class="postBlogApp mx-3 ">
         <div class="nAiUser d-flex pt-2 px-3" >
             <img

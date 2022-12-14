@@ -7,6 +7,7 @@
     import NewComment from './NewComment.vue';
     import CommentContainer from './CommentContainer.vue'
     import user from '../store/profile.js'
+
     const props = defineProps({
         post: {},
         typeof: Object
@@ -18,7 +19,7 @@
         <div class="nAiUser d-flex pt-2 px-3" >
             <img
             class="imagenPerfil"
-            :src="post.photo? post.photo : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"
+            :src="post.photoURL? post.photo : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"
             alt="" />
             <h3 class="nUsuario text-white fw-normal fs-5">{{ post.name}}</h3>
         </div>
@@ -30,7 +31,6 @@
         </div>
         <CommentContainer  :postId="post.id"/>
         <NewComment v-if="user" :postId="post.id"/>
-        <!-- <CommentPost v-for="comment in comments" :comment="comment" :key="comment.id"/> -->
     </div>
 </template>
 <style scoped>

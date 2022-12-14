@@ -10,13 +10,13 @@ const addComment = (comment) =>{
 
 const getComments = () =>{
     onSnapshot(commentRef, (snapshot) =>{
-        snapshot.forEach(doc =>{
-            comments.value = []
+        comments.value = []
+        snapshot.forEach(doc => {
             let newComment = {
                 id: doc.id,
                 postId: doc.data().postId,
+                date: doc.data().date,
                 name: doc.data().name,
-                message: doc.data().message,
                 email: doc.data().email,
                 text: doc.data().text,
                 photo: doc.data().photo,

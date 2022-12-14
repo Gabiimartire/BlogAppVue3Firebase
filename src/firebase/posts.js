@@ -16,7 +16,7 @@ const getPosts = () => {
                 date: doc.data().date,
                 name: doc.data().name,
                 email: doc.data().email,
-                message: doc.data().mesagge,
+                message: doc.data().message,
                 photo: doc.data().photo,
             }
             posts.value.push(newPost)

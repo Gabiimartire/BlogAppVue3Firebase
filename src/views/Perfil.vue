@@ -4,7 +4,6 @@
     import { posts } from '../store/PostStore.js'
     import {  ref, computed } from 'vue'
     const newUserName = 'No user Name'
-
     const myPosts = ref([])
 
     const updateMyPosts = computed(()=>{
@@ -20,7 +19,7 @@
     </div>
     <div class="perfil">
         <div class="nYf d-flex align-items-center justify-content-center gap-2 flex-column">
-            <img :src="user? user.photoURL : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"  class="fotoPerfil d-flex justify-content-center align-items-center" />
+            <img :src="user.photoURL? user.photoURL : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"  class="fotoPerfil d-flex justify-content-center align-items-center" />
             <h2 class="fs-5 ">{{user? user.displayName : newUserName}}</h2>
         </div>
         <h2 class="text-center text-white fs-1 my-4">Tus Posts</h2>
