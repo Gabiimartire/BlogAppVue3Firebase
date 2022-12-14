@@ -9,8 +9,8 @@ const addPost = (post) => {
 }
 const getPosts = () => {
     onSnapshot(postRef, (snapshot) => {
+        posts.value = []
         snapshot.forEach(doc => {
-            posts.value = []
             let newPost = {
                 id: doc.id,
                 date: doc.data().date,
@@ -20,7 +20,6 @@ const getPosts = () => {
                 photo: doc.data().photo,
             }
             posts.value.push(newPost)
-            posts.value.sort((a,b)=> b.date - a.date)
         })
     })
 }

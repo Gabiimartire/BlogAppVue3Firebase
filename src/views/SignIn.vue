@@ -4,7 +4,7 @@
 </script>
 <template>
     <div class="formulario m-auto">
-        <router-link to="/perfil"><button @click="loginWithGoogle">Iniciar Sesion con Google</button></router-link>
+        <router-link class="text-center" to="/perfil"><button class="btn-primary btn" @click="loginWithGoogle">Iniciar Sesion con Google</button></router-link>
     </div>
 </template>
 

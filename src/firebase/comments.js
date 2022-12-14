@@ -23,7 +23,6 @@ const getComments = () =>{
             }
             comments.value.push(newComment)
         })
-        comments.value.sort((a,b) => a.date - b.date)
     })
 }
 
