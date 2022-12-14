@@ -3,12 +3,15 @@
     import Favourite from './icons/FavouriteB.vue';
     import Share from './icons/ShareB.vue';
     import NewComment from '../components/NewComment.vue';
+    import CommentPost from '../components/CommentPost.vue'
+    import CommentContainer from '../components/CommentContainer.vue'
+    import { ref } from 'vue'
+    import { comments } from '../store/PostStore.js' 
     const props = defineProps({
-        post:{
-            type: Object,
-            required: true
-        }
-    })
+        post: {},
+        typeof: Object
+    })  
+    
 </script>
 <template>
     <div class="postBlogApp mx-3 ">
@@ -26,6 +29,7 @@
             <Share class="botoness" />
         </div>
         <NewComment />
+        <CommentContainer  :comments="comments" :postId="post.id"/>
         <!-- <CommentPost v-for="comment in comments" :comment="comment" :key="comment.id"/> -->
     </div>
 </template>

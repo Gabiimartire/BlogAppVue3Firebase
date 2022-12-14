@@ -1,11 +1,14 @@
 <script setup>
-    import {deleteComment, addComment} from '../firebase/comments.js'
+    import {deleteComment, addComment, comments} from '../firebase/comments.js'
     import Posts from '../components/Posts.vue'
     import user from '../store/profile.js'
     import { computed, ref } from 'vue'
+    import { posts } from '../store/PostStore.js'
+
     const name = ref('')
     const email = ref('')
     const message = ref('')
+
     const updateData = computed(() =>{
         if(user.value){
             console.log(user)
@@ -13,33 +16,16 @@
             email.value = user.value.email
         }
     })
-    const posts = ref([
-        {
+    const addNewComment = () => {
+        addComment({
             id: crypto.randomUUID(),
-            name: 'Edu',
-            photo: null,
-            title: 'Hello World',
-            message: 'Hello World',
             date: Date.now(),
-        },
-        {
-            id: crypto.randomUUID(),
-            name: 'Edu',
-            photo: null,
-            title: 'Hello World',
-            message: 'Hello World',
-            date: Date.now(),
-        },
-        {
-            id: crypto.randomUUID(),
-            name: 'Edu',
-            photo: null,
-            title: 'Hello World',
-            message: 'Hello World',
-            date: Date.now(),
-        },
-        
-    ])
+            name: name.value,
+            email: email.value,
+            message: message.value
+        })
+        message.value = ''
+    }
 </script>
 
 <template>
