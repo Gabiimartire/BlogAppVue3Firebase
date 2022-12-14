@@ -16,13 +16,12 @@ import Share from './icons/ShareB.vue';
       <p class="text-white fs-4 text-center p-presentacion border-bottom pb-3">
         <span class="span1">BlogApp</span> permite que los grupos de amigos, familiares y
         compañeros de trabajo se comuniquen y estén en contacto a través de mensajes rápidos
-        y frecuentes. Las personas publican lo que piensan, que pueden contener fotos,
-        videos, enlaces y texto.
+        y frecuentes. Las personas publican lo que piensan, debatir sobre cualquier tema.
       </p>
     </div>
     <div class="d-flex justify-content-center">
       <h3 class="text-white fw- fs-5 text-center border-bottom pb-2">
-        Post con mas favoritos
+        Proximamente posts con favoritos
       </h3>
     </div>
 

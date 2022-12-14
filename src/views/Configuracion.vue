@@ -9,6 +9,7 @@
         <router-link to="/configuracion"><img class="settings" src="../assets/settingsIn.svg" alt=""></router-link>
     </div>
     <div class="contenedorConfig">
+        
         <div class="nYf d-flex align-items-center justify-content-center gap-2 flex-column">
             <img class="fotoPerfil d-flex justify-content-center align-items-center" :src="user ? user.photoURL : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='" >
             <h2 class="fs-4 fw-light">{{user? user.displayName : newUserName}}</h2>
