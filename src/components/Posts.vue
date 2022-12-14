@@ -2,11 +2,11 @@
     import Comment from './icons/CommentB.vue';
     import Favourite from './icons/FavouriteB.vue';
     import Share from './icons/ShareB.vue';
-    import NewComment from '../components/NewComment.vue';
-    import CommentPost from '../components/CommentPost.vue'
-    import CommentContainer from '../components/CommentContainer.vue'
-    import { ref } from 'vue'
-    import { comments } from '../store/PostStore.js' 
+    // FIN DE ICONOS
+
+    import NewComment from './NewComment.vue';
+    import CommentContainer from './CommentContainer.vue'
+    import user from '../store/profile.js'
     const props = defineProps({
         post: {},
         typeof: Object
@@ -28,8 +28,8 @@
             <Comment class="botoness" />
             <Share class="botoness" />
         </div>
-        <NewComment />
-        <CommentContainer  :comments="comments" :postId="post.id"/>
+        <CommentContainer  :postId="post.id"/>
+        <NewComment v-if="user" :postId="post.id"/>
         <!-- <CommentPost v-for="comment in comments" :comment="comment" :key="comment.id"/> -->
     </div>
 </template>

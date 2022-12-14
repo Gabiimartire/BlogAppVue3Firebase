@@ -1,36 +1,9 @@
 <script setup>
-    import { addComment } from '../firebase/comments.js'
-    import { ref, computed } from 'vue'   
-    import user from '../store/profile.js'
-    const name = ref('')
-    const email = ref('')
-    const message = ref('')
-
-
-
-    const addNewComment = () => {
-        addComment({
-            id: crypto.randomUUID(),
-            name: name.value,
-            date: Date.new(),
-            email: email.value,
-            message: message.value,
-        })
-        message.value = ''
-    }
+    import NewPost from '../components/NewPost.vue'
 </script>
 
 <template>
-
-    <h1 class="text-center text-white">Crea tu post</h1>
-    <form >
-        <div class="formulario m-auto">
-            <input v-model="name" type="text" placeholder="Name" />
-            <input v-model="email" type="text" placeholder="Email" />
-            <textarea v-model="message" placeholder="Comment" @keyup.enter="addNewComment"></textarea>
-            <button @click.prevent="addNewComment">Submit</button>
-        </div>
-    </form>
+    <NewPost />
 </template>
 
 <style scoped>

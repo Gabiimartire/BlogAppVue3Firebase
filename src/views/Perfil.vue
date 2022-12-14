@@ -1,10 +1,20 @@
 <script setup>
     import Posts from '../components/Posts.vue'
-    import user from '../store/profile'
+    import user from '../store/profile.js'
+    import { posts } from '../store/PostStore.js'
+    import {  ref, computed } from 'vue'
     const newUserName = 'No user Name'
+
+    const myPosts = ref([])
+
+    const updateMyPosts = computed(()=>{
+    if(user.value){
+        myPosts.value = posts.value.filter(element => element.email === user.value.email) 
+    }
+})
 </script>
 <template>
-
+    {{updateMyPosts}}
     <div>
         <router-link to="/configuracion"><img class="settings" src="../assets/settings.svg" alt=""></router-link>
     </div>
@@ -16,7 +26,7 @@
         <h2 class="text-center text-white fs-1 my-4">Tus Posts</h2>
         <div class="mt-2">
 
-            <Posts v-for="comment in comments" :key="comment.id" :comment="comment" />
+            <Posts v-for="post in myPosts" :key="post.id" :post="post" />
         </div>
     </div>
 </template>

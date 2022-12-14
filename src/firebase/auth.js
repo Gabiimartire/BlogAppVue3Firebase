@@ -1,14 +1,23 @@
-import { app } from './firebase'
+import { app } from './firebase.js'
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut} from 'firebase/auth'
 import user from '../store/profile'
+import { addUser } from './users.js'
+
 const auth = getAuth(app)
 const provider = new GoogleAuthProvider();
 const loginWithGoogle = () =>{
     signInWithPopup(auth, provider)
-        .then((result) => {
-            console.log('user contenido :',user);
-            console.log('result',result)
-            user.value = result.user
+        .then((result) => { 
+            console.log('resultados', result);
+            let newUser = {
+                displayName: result.user.displayName,
+                photoURL: result.user.photoURL,
+                email: result.user.email,
+            }
+            user.value = {
+                ...newUser
+            }
+            addUser(newUser)
         }).catch((err) => {
             console.warn('error', err)
         });
@@ -24,4 +33,4 @@ const logout = () =>{
     })
 }
 
-export { loginWithGoogle, logout }
+export { loginWithGoogle, logout, user }

@@ -1,5 +1,6 @@
 <script setup>
     import { loginWithGoogle, logout } from '../firebase/auth.js';
+    import  user  from '../store/profile.js'
 </script>
 <template>
     <div class="formulario m-auto">

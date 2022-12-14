@@ -1,37 +1,22 @@
 <script setup>
-    import {deleteComment, addComment, comments} from '../firebase/comments.js'
     import Posts from '../components/Posts.vue'
-    import user from '../store/profile.js'
-    import { computed, ref } from 'vue'
     import { posts } from '../store/PostStore.js'
+    import { getPosts } from '../firebase/posts.js'
+    import { getComments } from '../firebase/comments.js'
+    import { onMounted } from 'vue'
 
-    const name = ref('')
-    const email = ref('')
-    const message = ref('')
-
-    const updateData = computed(() =>{
-        if(user.value){
-            console.log(user)
-            name.value = user.value.displayName
-            email.value = user.value.email
-        }
+    
+    onMounted(() => {
+        getPosts()
+        getComments()
     })
-    const addNewComment = () => {
-        addComment({
-            id: crypto.randomUUID(),
-            date: Date.now(),
-            name: name.value,
-            email: email.value,
-            message: message.value
-        })
-        message.value = ''
-    }
+
 </script>
 
 <template>
-    {{updateData}}
+    
     <h1 class="text-center text-white">Post Recientes</h1>
-    <Posts v-for="post in posts" :key="post.id" :post="post" />
+    <Posts v-for="post in posts" :post="post" :key="post.id"  />
     
 </template>
 
