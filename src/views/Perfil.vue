@@ -3,9 +3,16 @@
     import user from '../store/profile.js'
     import { posts } from '../store/PostStore.js'
     import {  ref, computed } from 'vue'
+    import { onMounted } from 'vue'
+    import { getPosts } from '../firebase/posts'
+    import { getComments } from '../firebase/comments'
     const newUserName = 'No user Name'
     const myPosts = ref([])
-
+    
+    onMounted(() => {
+        getPosts()
+        getComments()
+    })
     const updateMyPosts = computed(()=>{
     if(user.value){
         myPosts.value = posts.value.filter(element => element.email === user.value.email) 

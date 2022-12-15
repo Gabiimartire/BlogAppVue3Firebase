@@ -1,7 +1,7 @@
 import { app } from './firebase.js'
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut} from 'firebase/auth'
 import user from '../store/profile'
-import { addUser } from './users.js'
+
 
 const auth = getAuth(app)
 const provider = new GoogleAuthProvider();

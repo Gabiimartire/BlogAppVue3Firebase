@@ -40,7 +40,7 @@
                 <img :src="user.photoURL? user.photoURL : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"  class="fotoPerfil d-flex justify-content-center align-items-center" />
                 <h2 class="fs-5 ">{{user? user.displayName : newUserName}}</h2>
             </div>
-            <textarea @keyup.enter="addNewPost" minlength="6" maxlength="120" v-model="message" required placeholder="¿Qué estas pensando?"></textarea>
+            <textarea required @keyup.enter="addNewPost" minlength="6" maxlength="120" v-model="message"  placeholder="¿Qué estas pensando?"></textarea>
             <div class="d-flex justify-content-center">
                 <button @click.prevent="addNewPost" class="text-align-center text-center mb-2">Postear</button>
             </div>
