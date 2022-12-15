@@ -14,10 +14,10 @@ const loginWithGoogle = () =>{
                 photoURL: result.user.photoURL,
                 email: result.user.email,
             }
+            localStorage.setItem('user',JSON.stringify(newUser))
             user.value = {
                 ...newUser
             }
-            addUser(newUser)
         }).catch((err) => {
             console.warn('error', err)
         });
@@ -27,6 +27,7 @@ const logout = () =>{
         // sign out successfully
         console.log('logout');
         user.value = null
+        localStorage.setItem('user',null)
     }).catch((err) => {
         // an error occurred
         console.log('error logout');

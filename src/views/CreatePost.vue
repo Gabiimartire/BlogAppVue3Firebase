@@ -25,11 +25,11 @@
         margin: auto;
     }
     button{
-        border-radius: 10px;
+        border-radius:  30px;
         border: none;
         color: white;
         background-color: var(--terciario);
-        height: 3rem;
+        height: 2rem;
         font-weight: bold;
     }
     label{
@@ -37,7 +37,7 @@
         color: var(--terciario);
     }
     span{
-        font-weight: 700;
+        font-weight: 600;
         color: var(--terciario);
     }
     ::placeholder{
